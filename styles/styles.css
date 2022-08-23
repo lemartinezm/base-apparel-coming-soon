@@ -1,0 +1,132 @@
+html {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(135deg, hsl(0deg, 0%, 100%) 0%, hsl(0deg, 100%, 98%) 100%);
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 32px;
+}
+main #logo img {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+main #hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+main #hero img {
+  width: 100%;
+}
+main > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  padding: 64px 32px;
+  text-align: center;
+}
+main > div h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: 300;
+  line-height: 44px;
+  color: hsl(0deg, 36%, 70%);
+}
+main > div h1 span {
+  font-weight: 600;
+  color: #473E3F;
+}
+main > div p {
+  font-size: 14px;
+  color: hsl(0deg, 36%, 70%);
+}
+main > div form #email-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 48px;
+  border: 1px solid hsla(0deg, 36%, 70%, 0.5);
+  position: relative;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+main > div form #email-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 48px;
+  padding: 12px 80px 12px 24px;
+}
+main > div form #email-input input::-webkit-input-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  opacity: 50%;
+  font-family: "Josefin Sans", sans-serif;
+}
+main > div form #email-input input::-moz-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  opacity: 50%;
+  font-family: "Josefin Sans", sans-serif;
+}
+main > div form #email-input input:-ms-input-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  opacity: 50%;
+  font-family: "Josefin Sans", sans-serif;
+}
+main > div form #email-input input::-ms-input-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  opacity: 50%;
+  font-family: "Josefin Sans", sans-serif;
+}
+main > div form #email-input input::placeholder {
+  color: hsl(0deg, 36%, 70%);
+  opacity: 50%;
+  font-family: "Josefin Sans", sans-serif;
+}
+main > div form #email-input button {
+  position: absolute;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  right: -1px;
+  border-radius: 48px;
+  border: none;
+  height: 100%;
+  width: 56px;
+  background: rgb(248, 191, 191);
+  background: linear-gradient(135deg, rgb(248, 191, 191) 0%, rgb(238, 140, 140) 100%);
+}/*# sourceMappingURL=styles.css.map */
