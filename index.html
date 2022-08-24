@@ -35,20 +35,27 @@
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </p>
-        <form>
-          <div id="email-input">
-            <input type="email" name="" placeholder="Email Address" id="">
+        <form novalidate>
+          <div>
+            <input type="email" name="email" placeholder="Email Address"
+              id="email" required>
+
+            <picture id="icon-error">
+              <img src="./images/icon-error.svg" alt="icon error">
+            </picture>
+
             <button type="submit">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20"><path
-                  fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836
-                  8.836L1
-                  18.671"/></svg>
-              </button>
-            </div>
-          </form>
-        </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
+                <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836
+                  8.836L1 18.671"></path>
+              </svg>
+            </button>
+          </div>
+          <p id="error-message">Error</p>
+        </form>
+      </div>
 
-      </main>
-
-    </body>
-  </html>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

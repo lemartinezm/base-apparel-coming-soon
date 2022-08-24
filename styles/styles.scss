@@ -69,38 +69,60 @@ main {
       color: $desat_red;
     }
 
-    form #email-input {
+    form {
       display: flex;
-      align-items: center;
-      border-radius: 48px;
-      border: 1px solid hsla(0, 36%, 70%, 0.5);
-      position: relative;
-      box-sizing: content-box;
+      flex-direction: column;
+      gap: 4px;
 
-      input {
-        width: 100%;
-        height: 100%;
-        border: none;
+      > div {
+        display: flex;
+        align-items: center;
         border-radius: 48px;
-        padding: 12px 80px 12px 24px;
+        border: 1px solid hsla(0, 36%, 70%, 0.5);
+        position: relative;
+        box-sizing: border-box;
+  
+        input {
+          width: 100%;
+          border: 2px solid transparent;
+          border-radius: 48px;
+          padding: 12px 80px 12px 24px;
 
-        &::placeholder {
-          color: $desat_red;
-          opacity: 50%;
-          font-family: 'Josefin Sans', sans-serif;
+          &::placeholder {
+            color: $desat_red;
+            opacity: 50%;
+            font-family: 'Josefin Sans', sans-serif;
+          }
+        }
+
+        #icon-error {
+          display: inline-flex;
+          position: absolute;
+          right: 80px;
+          opacity: 0;
+          transition: opacity 0.2s linear;
+        }
+  
+        button {
+          position: absolute;
+          box-sizing: content-box;
+          cursor: pointer;
+          right: -1px;
+          border-radius: 48px;
+          border: none;
+          height: 100%;
+          width: 56px;
+          background: rgb(248, 191, 191);
+          background: linear-gradient(135deg, rgba(248, 191, 191, 1) 0%, rgba(238, 140, 140, 1) 100%);
         }
       }
 
-      button {
-        position: absolute;
-        box-sizing: content-box;
-        right: -1px;
-        border-radius: 48px;
-        border: none;
-        height: 100%;
-        width: 56px;
-        background: rgb(248, 191, 191);
-        background: linear-gradient(135deg, rgba(248, 191, 191, 1) 0%, rgba(238, 140, 140, 1) 100%);
+      #error-message {
+        text-align: left;
+        margin-left: 24px;
+        color: $soft_red;
+        opacity: 0;
+        transition: opacity 0.2s linear;
       }
     }
   }

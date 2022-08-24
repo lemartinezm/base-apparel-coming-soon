@@ -73,7 +73,17 @@ main > div p {
   font-size: 14px;
   color: hsl(0deg, 36%, 70%);
 }
-main > div form #email-input {
+main > div form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+main > div form > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,45 +93,55 @@ main > div form #email-input {
   border-radius: 48px;
   border: 1px solid hsla(0deg, 36%, 70%, 0.5);
   position: relative;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-main > div form #email-input input {
+main > div form > div input {
   width: 100%;
-  height: 100%;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 48px;
   padding: 12px 80px 12px 24px;
 }
-main > div form #email-input input::-webkit-input-placeholder {
+main > div form > div input::-webkit-input-placeholder {
   color: hsl(0deg, 36%, 70%);
   opacity: 50%;
   font-family: "Josefin Sans", sans-serif;
 }
-main > div form #email-input input::-moz-placeholder {
+main > div form > div input::-moz-placeholder {
   color: hsl(0deg, 36%, 70%);
   opacity: 50%;
   font-family: "Josefin Sans", sans-serif;
 }
-main > div form #email-input input:-ms-input-placeholder {
+main > div form > div input:-ms-input-placeholder {
   color: hsl(0deg, 36%, 70%);
   opacity: 50%;
   font-family: "Josefin Sans", sans-serif;
 }
-main > div form #email-input input::-ms-input-placeholder {
+main > div form > div input::-ms-input-placeholder {
   color: hsl(0deg, 36%, 70%);
   opacity: 50%;
   font-family: "Josefin Sans", sans-serif;
 }
-main > div form #email-input input::placeholder {
+main > div form > div input::placeholder {
   color: hsl(0deg, 36%, 70%);
   opacity: 50%;
   font-family: "Josefin Sans", sans-serif;
 }
-main > div form #email-input button {
+main > div form > div #icon-error {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  right: 80px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+main > div form > div button {
   position: absolute;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  cursor: pointer;
   right: -1px;
   border-radius: 48px;
   border: none;
@@ -129,4 +149,12 @@ main > div form #email-input button {
   width: 56px;
   background: rgb(248, 191, 191);
   background: linear-gradient(135deg, rgb(248, 191, 191) 0%, rgb(238, 140, 140) 100%);
+}
+main > div form #error-message {
+  text-align: left;
+  margin-left: 24px;
+  color: hsl(0deg, 93%, 68%);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
 }/*# sourceMappingURL=styles.css.map */
