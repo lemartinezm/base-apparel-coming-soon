@@ -15,6 +15,10 @@ p {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
   margin: 0;
   background: rgb(255, 255, 255);
   background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%);
@@ -36,8 +40,6 @@ main {
 
   #hero {
     display: flex;
-    width: 100%;
-    height: auto;
     img {
       width: 100%;
     }
@@ -125,5 +127,77 @@ main {
         transition: opacity 0.2s linear;
       }
     }
+  }
+}
+
+@media (min-width: 576px) {
+  main {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    max-width: none;
+    margin: 0;
+    flex-direction: row-reverse;
+
+    #logo {
+      position: absolute;
+      left: 176px;
+      top: 64px;
+      padding: 0;
+      img {
+        width: 158px;
+        height: 33px;
+        transform: scale(1.2);
+      }
+    }
+
+    #hero {
+      height: 100%;
+ 
+      img {
+        object-fit: cover;
+      }
+    }
+
+    #container {
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      box-sizing: border-box;
+      margin: 224px 176px 144px 144px;
+
+      h1 {
+        font-size: 64px;
+        line-height: 70px;
+        letter-spacing: 16px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      form {
+        width: 100%;
+        // terminar el box-shadow
+        div > button:hover {
+          opacity: 50%;
+          box-shadow: 0 10px 15px $soft_red;
+        }
+      }
+    }
+
   }
 }

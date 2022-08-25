@@ -9,6 +9,14 @@ p {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 100vh;
   margin: 0;
   background: rgb(255, 255, 255);
   background: linear-gradient(135deg, hsl(0deg, 0%, 100%) 0%, hsl(0deg, 100%, 98%) 100%);
@@ -39,8 +47,6 @@ main #hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  height: auto;
 }
 main #hero img {
   width: 100%;
@@ -157,4 +163,78 @@ main > div form #error-message {
   opacity: 0;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
+}
+
+@media (min-width: 576px) {
+  main {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    max-width: none;
+    margin: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  main #logo {
+    position: absolute;
+    left: 176px;
+    top: 64px;
+    padding: 0;
+  }
+  main #logo img {
+    width: 158px;
+    height: 33px;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  main #hero {
+    height: 100%;
+  }
+  main #hero img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main #container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 224px 176px 144px 144px;
+  }
+  main #container h1 {
+    font-size: 64px;
+    line-height: 70px;
+    letter-spacing: 16px;
+  }
+  main #container p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  main #container form {
+    width: 100%;
+  }
+  main #container form div > button:hover {
+    opacity: 50%;
+    -webkit-box-shadow: 0 10px 15px hsl(0deg, 93%, 68%);
+            box-shadow: 0 10px 15px hsl(0deg, 93%, 68%);
+  }
 }/*# sourceMappingURL=styles.css.map */
